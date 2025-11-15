@@ -1,0 +1,93 @@
+# ========================================
+# 方案 2: 使用各官方渠道密钥配置
+# ========================================
+#
+# 优点: 成本最低，免费额度最多
+# 缺点: 需要注册多个账号
+# 
+# ========================================
+
+# Flask 服务器配置
+HOST=0.0.0.0
+PORT=5000
+
+# ===================== Kimi（月之暗面）======================
+# 申请地址: https://platform.moonshot.cn/
+# 特点: 国内可访问，新用户送 15 元，长上下文
+# 成本: ¥0.02/1K tokens
+
+INSIGHT_ENGINE_API_KEY=sk-your-kimi-key
+INSIGHT_ENGINE_BASE_URL=https://api.moonshot.cn/v1
+INSIGHT_ENGINE_MODEL_NAME=moonshot-v1-128k
+
+# ===================== DeepSeek ======================
+# 申请地址: https://platform.deepseek.com/
+# 特点: 超低成本，新用户送 500 万 tokens！
+# 成本: ¥0.001/1K tokens（输入），¥0.002/1K tokens（输出）
+
+QUERY_ENGINE_API_KEY=sk-your-deepseek-key
+QUERY_ENGINE_BASE_URL=https://api.deepseek.com
+QUERY_ENGINE_MODEL_NAME=deepseek-chat
+
+MINDSPIDER_API_KEY=sk-your-deepseek-key
+MINDSPIDER_BASE_URL=https://api.deepseek.com
+MINDSPIDER_MODEL_NAME=deepseek-chat
+
+# ===================== Gemini（需要中转）======================
+# 官方地址: https://ai.google.dev/（国内访问困难）
+# 中转服务: https://aihubmix.com/?aff=8Ds9
+# 特点: 多模态能力强，适合分析图片视频
+# 建议: 使用中转服务
+
+MEDIA_ENGINE_API_KEY=sk-your-gemini-or-aihubmix-key
+MEDIA_ENGINE_BASE_URL=https://aihubmix.com/v1
+MEDIA_ENGINE_MODEL_NAME=gemini-2.0-flash-exp
+
+REPORT_ENGINE_API_KEY=sk-your-gemini-or-aihubmix-key
+REPORT_ENGINE_BASE_URL=https://aihubmix.com/v1
+REPORT_ENGINE_MODEL_NAME=gemini-2.0-flash-exp
+
+# ===================== 通义千问（阿里云）======================
+# 申请地址: https://www.aliyun.com/product/bailian
+# 特点: 国内服务，稳定快速
+# 成本: 根据套餐不同
+
+FORUM_HOST_API_KEY=sk-your-qwen-key
+FORUM_HOST_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
+FORUM_HOST_MODEL_NAME=qwen-plus
+
+KEYWORD_OPTIMIZER_API_KEY=sk-your-qwen-key
+KEYWORD_OPTIMIZER_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
+KEYWORD_OPTIMIZER_MODEL_NAME=qwen-turbo
+
+# ================== 网络搜索工具（可选）====================
+# Tavily: https://www.tavily.com/
+TAVILY_API_KEY=tvly-your-key
+
+# Bocha: https://open.bochaai.com/
+BOCHA_BASE_URL=https://api.bochaai.com/v1/ai-search
+BOCHA_WEB_SEARCH_API_KEY=sk-your-bocha-key
+
+# ================== 搜索引擎配置 ====================
+DEFAULT_SEARCH_HOT_CONTENT_LIMIT=100
+DEFAULT_SEARCH_TOPIC_GLOBALLY_LIMIT_PER_TABLE=50
+DEFAULT_SEARCH_TOPIC_BY_DATE_LIMIT_PER_TABLE=100
+DEFAULT_GET_COMMENTS_FOR_TOPIC_LIMIT=500
+DEFAULT_SEARCH_TOPIC_ON_PLATFORM_LIMIT=200
+MAX_REFLECTIONS=3
+MAX_PARAGRAPHS=6
+SEARCH_TIMEOUT=240
+MAX_CONTENT_LENGTH=500000
+
+# ========================================
+# 成本预估（使用官方渠道）:
+# 
+# 1 次完整分析大约消耗:
+# - Kimi (Insight):    ¥0.2 - ¥0.5
+# - DeepSeek (Query):  ¥0.01 - ¥0.05
+# - Gemini (Report):   看中转服务定价
+# 
+# DeepSeek 新用户 500 万 tokens 可以跑很久！
+# 
+# ========================================
+

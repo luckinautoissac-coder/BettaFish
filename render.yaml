@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: bettafish
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 10000
+      - key: INSIGHT_ENGINE_API_KEY
+        sync: false
+      - key: INSIGHT_ENGINE_BASE_URL
+        sync: false
+      - key: INSIGHT_ENGINE_MODEL_NAME
+        sync: false
+      - key: QUERY_ENGINE_API_KEY
+        sync: false
+      - key: QUERY_ENGINE_BASE_URL
+        sync: false
+      - key: QUERY_ENGINE_MODEL_NAME
+        sync: false
+      - key: REPORT_ENGINE_API_KEY
+        sync: false
+      - key: REPORT_ENGINE_BASE_URL
+        sync: false
+      - key: REPORT_ENGINE_MODEL_NAME
+        sync: false
+

@@ -1,0 +1,82 @@
+# ========================================
+# 方案 1: 使用 AIHubMix 统一密钥配置
+# ========================================
+#
+# 申请地址: https://aihubmix.com/?aff=8Ds9
+# 
+# 优点: 只需一个账号，一个密钥管理所有模型
+# 
+# ========================================
+
+# Flask 服务器配置
+HOST=0.0.0.0
+PORT=5000
+
+# ===================== 统一使用 AIHubMix ======================
+# 只需要一个 AIHubMix API Key，配置到所有 Agent
+
+# 你的 AIHubMix API Key（只需申请一个）
+AIHUBMIX_API_KEY=sk-your-aihubmix-key-here
+
+# Insight Agent - 使用 Claude 或 GPT-4
+INSIGHT_ENGINE_API_KEY=sk-your-aihubmix-key-here
+INSIGHT_ENGINE_BASE_URL=https://aihubmix.com/v1
+INSIGHT_ENGINE_MODEL_NAME=claude-3-5-sonnet-20241022
+
+# Media Agent - 使用 Gemini（支持多模态）
+MEDIA_ENGINE_API_KEY=sk-your-aihubmix-key-here
+MEDIA_ENGINE_BASE_URL=https://aihubmix.com/v1
+MEDIA_ENGINE_MODEL_NAME=gemini-2.0-flash-exp
+
+# Query Agent - 使用 GPT-4 或 Claude
+QUERY_ENGINE_API_KEY=sk-your-aihubmix-key-here
+QUERY_ENGINE_BASE_URL=https://aihubmix.com/v1
+QUERY_ENGINE_MODEL_NAME=gpt-4o-mini
+
+# Report Agent - 使用 Gemini 或 Claude
+REPORT_ENGINE_API_KEY=sk-your-aihubmix-key-here
+REPORT_ENGINE_BASE_URL=https://aihubmix.com/v1
+REPORT_ENGINE_MODEL_NAME=gemini-2.0-flash-exp
+
+# MindSpider Agent - 使用轻量模型
+MINDSPIDER_API_KEY=sk-your-aihubmix-key-here
+MINDSPIDER_BASE_URL=https://aihubmix.com/v1
+MINDSPIDER_MODEL_NAME=gpt-4o-mini
+
+# Forum Host - 使用对话模型
+FORUM_HOST_API_KEY=sk-your-aihubmix-key-here
+FORUM_HOST_BASE_URL=https://aihubmix.com/v1
+FORUM_HOST_MODEL_NAME=gpt-4o
+
+# SQL Keyword Optimizer - 使用轻量模型
+KEYWORD_OPTIMIZER_API_KEY=sk-your-aihubmix-key-here
+KEYWORD_OPTIMIZER_BASE_URL=https://aihubmix.com/v1
+KEYWORD_OPTIMIZER_MODEL_NAME=gpt-4o-mini
+
+# ================== 网络工具配置（可选）====================
+TAVILY_API_KEY=
+BOCHA_BASE_URL=https://api.bochaai.com/v1/ai-search
+BOCHA_WEB_SEARCH_API_KEY=
+
+# ================== 搜索引擎配置 ====================
+DEFAULT_SEARCH_HOT_CONTENT_LIMIT=100
+DEFAULT_SEARCH_TOPIC_GLOBALLY_LIMIT_PER_TABLE=50
+DEFAULT_SEARCH_TOPIC_BY_DATE_LIMIT_PER_TABLE=100
+DEFAULT_GET_COMMENTS_FOR_TOPIC_LIMIT=500
+DEFAULT_SEARCH_TOPIC_ON_PLATFORM_LIMIT=200
+MAX_REFLECTIONS=3
+MAX_PARAGRAPHS=6
+SEARCH_TIMEOUT=240
+MAX_CONTENT_LENGTH=500000
+
+# ========================================
+# 配置说明:
+# 
+# 1. 注册 AIHubMix: https://aihubmix.com/?aff=8Ds9
+# 2. 获取你的 API Key
+# 3. 将上面所有 "sk-your-aihubmix-key-here" 
+#    替换成你的真实密钥
+# 4. 重启应用即可
+#
+# ========================================
+
